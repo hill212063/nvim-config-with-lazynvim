@@ -1,14 +1,17 @@
 return {
 	"mfussenegger/nvim-dap",
 	dependencies = {
-		"rcarriga/nvim-dap-ui",
 		"leoluz/nvim-dap-go",
+		"rcarriga/nvim-dap-ui",
+		"tpope/vim-fugitive",
+		"nvim-neotest/nvim-nio",
+		"folke/trouble.nvim",
 	},
 	config = function()
 		local dap = require("dap")
 		local dapui = require("dapui")
 
-		dapui.setup()
+		require("dapui").setup()
 		require("dap-go").setup()
 
 		dap.listeners.before.attach.dapui_config = function()
@@ -24,8 +27,7 @@ return {
 			dapui.close()
 		end
 
-		local map = vim.api.nvim_set_keymap
-		map("n", "<leader>dt", dap.toggle_breakpoint, {})
-		map("n", "<leader>dc", dap.continue, {})
+		vim.keymap.set("n", "<Leader>dt", dap.toggle_breakpoint, {})
+		vim.keymap.set("n", "<Leader>dc", dap.continue, {})
 	end,
 }
