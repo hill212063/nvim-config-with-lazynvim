@@ -26,7 +26,6 @@ return {
 		lspconfig.bashls.setup({})
 		lspconfig.dockerls.setup({})
 		lspconfig.docker_compose_language_service.setup({})
-		lspconfig.lua_ls.setup({})
 
 		-- Global mappings.
 		-- See `:help vim.diagnostic.*` for documentation on any of the below functions
