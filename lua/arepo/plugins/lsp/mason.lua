@@ -41,6 +41,7 @@ return {
         "gopls",
         "bashls",
         "dockerls",
+        "terraformls",
         "docker_compose_language_service",
       },
       -- auto-install config server (with lspconfig)
