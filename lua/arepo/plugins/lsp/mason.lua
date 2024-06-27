@@ -43,6 +43,7 @@ return {
         "dockerls",
         "terraformls",
         "docker_compose_language_service",
+        "vuels",
       },
       -- auto-install config server (with lspconfig)
       automatic_installation = true,
