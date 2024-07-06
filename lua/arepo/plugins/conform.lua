@@ -12,6 +12,7 @@ return {
 				html = { "htmlbeautifier" },
 				yaml = { "yamlfmt" },
 				go = { "goimports", "gofmt" },
+				java = { "google-java-format" },
 			},
 		})
 
