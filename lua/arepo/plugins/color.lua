@@ -1,8 +1,14 @@
 return {
-  "ramojus/mellifluous.nvim",
-  -- version = "v0.*", -- uncomment for stable config (some features might be missed if/when v1 comes out)
+  "sekke276/dark_flat.nvim",
   config = function()
-    require("mellifluous").setup({})     -- optional, see configuration section.
-    vim.cmd("colorscheme mellifluous")
+    require("dark_flat").setup({
+      transparent = true,
+      italics = true
+    })
+
+    -- Line number color
+    vim.api.nvim_set_hl(0, "LineNrAbove", { fg = "white", bold = false })
+    vim.api.nvim_set_hl(0, "LineNr", { fg = "white", bold = true })
+    vim.api.nvim_set_hl(0, "LineNrBelow", { fg = "white", bold = false })
   end,
 }
