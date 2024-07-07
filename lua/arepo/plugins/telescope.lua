@@ -22,17 +22,18 @@ return {
     vim.keymap.set("n", "<leader>vff", builtin.current_buffer_fuzzy_find, { desc = "Telescope Current Buffer Fuzzy Find" })
 
     -- Neovim LSP Pickers
-    vim.keymap.set("n", "<leader>lr", builtin.lsp_references, { desc = "Telescope LSP References" })
-    vim.keymap.set("n", "<leader>lic", builtin.lsp_incoming_calls, { desc = "Telescope LSP Incoming Calls" })
-    vim.keymap.set("n", "<leader>loc", builtin.lsp_outgoing_calls, { desc = "Telescope LSP Outgoing Calls" })
-    vim.keymap.set("n", "<leader>lds", builtin.lsp_document_symbols, { desc = "Telescope LSP Document Symbols" })
-    vim.keymap.set("n", "<leader>lws", builtin.lsp_workspace_symbols, { desc = "Telescope LSP Workspace Symbols" })
     vim.keymap.set("n", "<leader>ldws", builtin.lsp_dynamic_workspace_symbols,
       { desc = "Telescope LSP Dynamic Workspace Symbols" })
     vim.keymap.set("n", "<leader>ld", builtin.diagnostics, { desc = "Telescope Diagnostics" })
-    vim.keymap.set("n", "<leader>lgi", builtin.lsp_implementations, { desc = "Telescope LSP Implementations" })
-    vim.keymap.set("n", "<leader>lgd", builtin.lsp_definitions, { desc = "Telescope LSP Definitions" })
-    vim.keymap.set("n", "<leader>ltd", builtin.lsp_type_definitions, { desc = "Telescope LSP Type Definitions" })
+    -- ***Below can be used by lsp config with telescope lsp handler***
+    -- vim.keymap.set("n", "<leader>lgd", builtin.lsp_definitions, { desc = "Telescope LSP Definitions" })
+    -- vim.keymap.set("n", "<leader>lgi", builtin.lsp_implementations, { desc = "Telescope LSP Implementations" })
+    -- vim.keymap.set("n", "<leader>ltd", builtin.lsp_type_definitions, { desc = "Telescope LSP Type Definitions" })
+    -- vim.keymap.set("n", "<leader>lr", builtin.lsp_references, { desc = "Telescope LSP References" })
+    -- vim.keymap.set("n", "<leader>lds", builtin.lsp_document_symbols, { desc = "Telescope LSP Document Symbols" })
+    -- vim.keymap.set("n", "<leader>lws", builtin.lsp_workspace_symbols, { desc = "Telescope LSP Workspace Symbols" })
+    -- vim.keymap.set("n", "<leader>lic", builtin.lsp_incoming_calls, { desc = "Telescope LSP Incoming Calls" })
+    -- vim.keymap.set("n", "<leader>loc", builtin.lsp_outgoing_calls, { desc = "Telescope LSP Outgoing Calls" })
 
     -- Git Pickers
     vim.keymap.set("n", "<leader>gc", builtin.git_commits, { desc = "Telescope Git Commits" })

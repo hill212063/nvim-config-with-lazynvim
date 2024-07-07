@@ -11,4 +11,9 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require("lazy").setup({ { import = "arepo.plugins" }, { import = "arepo.plugins.lsp" } })
+require("lazy").setup({
+  { import = "arepo.plugins" },
+  { import = "arepo.plugins.lsp" },
+  { import = "arepo.plugins.lsp.go" },
+  { import = "arepo.plugins.lsp.java" }
+})

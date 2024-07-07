@@ -1,7 +1,6 @@
 return {
 	"mfussenegger/nvim-dap",
 	dependencies = {
-		"leoluz/nvim-dap-go",
 		"rcarriga/nvim-dap-ui",
 		"tpope/vim-fugitive",
 		"nvim-neotest/nvim-nio",
@@ -12,7 +11,6 @@ return {
 		local dapui = require("dapui")
 
 		require("dapui").setup()
-		require("dap-go").setup()
 
 		dap.listeners.before.attach.dapui_config = function()
 			dapui.open()
