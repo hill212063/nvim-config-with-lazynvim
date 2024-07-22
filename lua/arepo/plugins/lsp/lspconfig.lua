@@ -38,12 +38,25 @@ return {
       settings = {
         ['helm-ls'] = {
           yamlls = {
+            enabled = false,
             path = "yaml-language-server",
           }
         }
       }
     }
-    lspconfig.yamlls.setup({})
+    lspconfig.yamlls.setup({
+      settings = {
+        yaml = {
+          schemas = {
+            ["https://json.schemastore.org/github-workflow.json"] = "/.github/workflows/*",
+            ["https://json.schemastore.org/pre-commit-config.json"] = "/.pre-commit-config.*",
+            ["https://json.schemastore.org/catalog-info.json"] = ".backstage/*.yaml",
+            ["https://raw.githubusercontent.com/iterative/dvcyaml-schema/master/schema.json"] = "**/dvc.yaml",
+            ["https://json.schemastore.org/swagger-2.0.json"] = "**/swagger.yaml",
+          },
+        }
+      }
+    })
 
     -- Global mappings.
     -- See `:help vim.diagnostic.*` for documentation on any of the below functions
