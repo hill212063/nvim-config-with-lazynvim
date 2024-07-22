@@ -45,6 +45,7 @@ return {
 				"docker_compose_language_service",
 				"vuels",
 				"jdtls",
+        "rust_analyzer",
 			},
 			-- auto-install config server (with lspconfig)
 			automatic_installation = true,
