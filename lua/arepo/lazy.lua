@@ -13,6 +13,7 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
   { import = "arepo.plugins" },
+  { import = "arepo.plugins.git" },
   { import = "arepo.plugins.lsp" },
   { import = "arepo.plugins.lsp.go" },
   { import = "arepo.plugins.lsp.java" }
