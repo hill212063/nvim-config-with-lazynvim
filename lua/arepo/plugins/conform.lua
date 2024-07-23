@@ -13,6 +13,8 @@ return {
         go = { "goimports", "gofmt" },
         java = { "google-java-format" },
         rust = { "rustfmt" },
+        terraform = { "terraform_fmt" },
+        hcl = { "terragrunt_hclfmt" }
       },
     })
 
