@@ -1,5 +1,7 @@
 vim.opt.nu = true
 vim.opt.relativenumber = true
+vim.opt.numberwidth = 9
+vim.opt.statuscolumn = "%s%l %r"
 
 vim.opt.clipboard = "unnamedplus"
 
