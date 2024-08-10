@@ -44,7 +44,7 @@ return {
     map("n", "<leader>ec", "<cmd>NvimTreeCollapse<CR>", { desc = "Collapse file explorer" })
     map("n", "<leader>er", "<cmd>NvimTreeRefresh<CR>", { desc = "Refresh file explorer" })
     map("n", "<leader>er+", "<cmd>NvimTreeResize +5<CR>", { desc = "Resize tree +5" })
-    map("n", "<leader>er+", "<cmd>NvimTreeResize -5<CR>", { desc = "Resize tree -5" })
+    map("n", "<leader>er-", "<cmd>NvimTreeResize -5<CR>", { desc = "Resize tree -5" })
 
     vim.cmd [[hi NvimTreeNormal guibg=NONE ctermbg=NONE]]
   end,
