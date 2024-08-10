@@ -66,7 +66,9 @@ return {
         "gitlint",
         "glint",
         "gospel",
-        "yamllint"
+        "yamllint",
+        -- Debugger
+        "debugpy",
       },
       -- auto-install config server (with lspconfig)
       automatic_installation = true,
