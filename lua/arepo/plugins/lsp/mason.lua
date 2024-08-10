@@ -4,6 +4,34 @@ return {
     "williamboman/mason-lspconfig.nvim",
     "WhoIsSethDaniel/mason-tool-installer.nvim",
   },
+  opts = {
+    ensure_installed = {
+      -- Formatter
+      "stylua",
+      "prettierd",
+      "xmlformat",
+      "jq",
+      "htmlbeautifier",
+      "yamlfmt",
+      "goimports",
+      "gofmt",
+      "googlejava-format",
+      "rustfmt",
+      "terraform_fmt",
+      "terragrunt_hclfmt",
+      "black",
+      -- Linter
+      "mypy",
+      "ruff",
+      "eslintd",
+      "gitlint",
+      "glint",
+      "gospel",
+      "yamllint",
+      -- Debugger
+      "debugpy",
+    }
+  },
   config = function()
     -- import mason
     local mason = require("mason")
@@ -44,31 +72,7 @@ return {
         "jdtls",
         "rust_analyzer",
         "helm_ls",
-        "yamlls",
-        -- Formatter
-        "stylua",
-        "prettierd",
-        "xmlformat",
-        "jq",
-        "htmlbeautifier",
-        "yamlfmt",
-        "goimports",
-        "gofmt",
-        "googlejava-format",
-        "rustfmt",
-        "terraform_fmt",
-        "terragrunt_hclfmt",
-        "black",
-        -- Linter
-        "mypy",
-        "ruff",
-        "eslintd",
-        "gitlint",
-        "glint",
-        "gospel",
-        "yamllint",
-        -- Debugger
-        "debugpy",
+        "yamlls"
       },
       -- auto-install config server (with lspconfig)
       automatic_installation = true,
