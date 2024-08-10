@@ -7,7 +7,7 @@ return {
         javascript = { { "prettierd", "prettier" } },
         typescript = { { "prettierd", "prettier" } },
         xml = { "xmlformat" },
-        json = { "fixjson" },
+        json = { "jq" },
         html = { "htmlbeautifier" },
         yaml = { "yamlfmt" },
         go = { "goimports", "gofmt" },
