@@ -11,6 +11,7 @@ return {
         html = { "htmlbeautifier" },
         yaml = { "yamlfmt" },
         go = { "goimports", "gofmt" },
+        python = { "black" },
         java = { "google-java-format" },
         rust = { "rustfmt" },
         terraform = { "terraform_fmt" },

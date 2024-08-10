@@ -58,6 +58,7 @@ return {
         "rustfmt",
         "terraform_fmt",
         "terragrunt_hclfmt",
+        "black",
         -- Linter
         "mypy",
         "ruff",
