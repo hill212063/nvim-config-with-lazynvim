@@ -1,6 +1,6 @@
 return {
-  "EdenEast/nightfox.nvim",
+  "gnmearacaun/zephyr-clear.nvim",
   config = function()
-    vim.cmd("colorscheme dayfox")
+    vim.cmd("colorscheme zephyr_clear")
   end,
 }
