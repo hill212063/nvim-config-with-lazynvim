@@ -1,6 +1,11 @@
 # External Component to install.
 
 - ripgrep
+- fd
 - lazygit
 - xclip
-- All formatter manually install using Mason
+- nodejs
+- go
+- python
+- pynvim
+- ruby
