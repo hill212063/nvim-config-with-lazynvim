@@ -10,6 +10,9 @@ return {
 		local dap = require("dap")
 		local dapui = require("dapui")
 
+		-- Config for JS TS JSX TSX
+		require("arepo.config.dap.dap-js")
+
 		dapui.setup()
 		dap.listeners.after.event_initialized["dapui_config"] = function()
 			dapui.open()
@@ -20,7 +23,11 @@ return {
 		dap.listeners.before.event_exited["dapui_config"] = function()
 			dapui.close()
 		end
-		vim.keymap.set("n", "<Leader>dt", dap.toggle_breakpoint, { desc = "Toggle breakpoint" })
+
+		vim.keymap.set("n", "<Leader>dso", dap.step_over, { desc = "Debug step over" })
+		vim.keymap.set("n", "<Leader>dsi", dap.step_into, { desc = "Debug step into" })
+		vim.keymap.set("n", "<Leader>dsou", dap.step_out, { desc = "Debug step out" })
+		vim.keymap.set("n", "<Leader>dt", dap.toggle_breakpoint, { desc = "Debug toggle breakpoint" })
 		vim.keymap.set("n", "<Leader>dc", dap.continue, { desc = "Debug continue" })
 	end,
 }

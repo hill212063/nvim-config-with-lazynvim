@@ -29,7 +29,6 @@ return {
 				"html",
 				"cssls",
 				"lua_ls",
-				"graphql",
 				"emmet_ls",
 				"pyright",
 				"jsonls",
@@ -72,6 +71,8 @@ return {
 				-- Debugger
 				"debugpy",
 				"delve",
+				"js-debug-adapter",
+				"chrome-debug-adapter",
 			},
 			automatic_installation = true,
 		})
