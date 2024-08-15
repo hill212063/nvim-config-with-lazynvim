@@ -31,3 +31,12 @@ return {
 		vim.keymap.set("n", "<Leader>dc", dap.continue, { desc = "Debug continue" })
 	end,
 }
+
+--nvim-dap uses five signs:
+
+-- - `DapBreakpoint` for breakpoints (default: `B`)
+-- - `DapBreakpointCondition` for conditional breakpoints (default: `C`)
+-- - `DapLogPoint` for log points (default: `L`)
+-- - `DapStopped` to indicate where the debugee is stopped (default: `→`)
+-- - `DapBreakpointRejected` to indicate breakpoints rejected by the debug
+--   adapter (default: `R`)
