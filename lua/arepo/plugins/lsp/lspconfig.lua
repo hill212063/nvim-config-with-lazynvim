@@ -15,22 +15,28 @@ return {
 		-- import lspconfig plugin
 		local lspconfig = require("lspconfig")
 
-		-- Setup lsp
-		lspconfig.tsserver.setup({})
-		lspconfig.html.setup({})
-		lspconfig.cssls.setup({})
-		lspconfig.lua_ls.setup({})
-		lspconfig.emmet_ls.setup({})
-		lspconfig.pyright.setup({})
-		lspconfig.jsonls.setup({})
-		lspconfig.gopls.setup({})
-		lspconfig.bashls.setup({})
-		lspconfig.dockerls.setup({})
-		lspconfig.docker_compose_language_service.setup({})
-		lspconfig.terraformls.setup({})
-		lspconfig.jdtls.setup({})
-		lspconfig.rust_analyzer.setup({})
-		-- setup helm-ls
+		-- Setup LSP default
+		for _, lsp in ipairs({
+			"tsserver",
+			"tailwindcss",
+			"html",
+			"cssls",
+			"lua_ls",
+			"emmet_ls",
+			"pyright",
+			"jsonls",
+			"gopls",
+			"bashls",
+			"dockerls",
+			"docker_compose_language_service",
+			"terraformls",
+			"jdtls",
+			"rust_analyzer",
+		}) do
+			lspconfig[lsp].setup({})
+		end
+
+		-- setup LSP custom
 		lspconfig.helm_ls.setup({
 			settings = {
 				["helm-ls"] = {

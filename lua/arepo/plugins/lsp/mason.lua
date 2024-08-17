@@ -26,6 +26,7 @@ return {
 			ensure_installed = {
 				-- LSP
 				"tsserver",
+				"tailwindcss",
 				"html",
 				"cssls",
 				"lua_ls",
