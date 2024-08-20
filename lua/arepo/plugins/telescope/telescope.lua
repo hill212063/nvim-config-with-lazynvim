@@ -5,12 +5,19 @@ return {
 		"nvim-lua/plenary.nvim",
 	},
 	config = function()
+		local telescope = require("telescope")
 		local builtin = require("telescope.builtin")
 
 		-- File Pickers
 		vim.keymap.set("n", "<leader>ff", builtin.find_files, { desc = "Telescope Find files" })
 		vim.keymap.set("n", "<leader>fg", builtin.git_files, { desc = "Telescope Git files" })
-		vim.keymap.set("n", "<leader>fl", builtin.live_grep, { desc = "Telescope Live Grep" })
+
+		vim.keymap.set(
+			"n",
+			"<leader>fl",
+			":lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>",
+			{ desc = "Telescope Live Grep" }
+		)
 		vim.keymap.set("n", "<leader>fs", builtin.grep_string, { desc = "Telescope Grep String" })
 
 		-- Vim Pickers
@@ -67,7 +74,17 @@ return {
 			vim.cmd(string.format("noautocmd lua vim.api.nvim_set_current_win(%s)", winid))
 			-- api.nvim_set_current_win(winid)
 		end
-		require("telescope").setup({
+		telescope.setup({
+			pickers = {
+				live_grep = {
+					additional_args = function(_)
+						return { "--hidden" }
+					end,
+				},
+				find_files = {
+					hidden = true,
+				},
+			},
 			defaults = {
 				mappings = {
 					n = {
