@@ -21,5 +21,3 @@ return {
 		require("telescope").load_extension("fzf")
 	end,
 }
-
--- This plugin for file finder to use exclude or other fzf syntax

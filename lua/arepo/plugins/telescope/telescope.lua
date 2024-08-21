@@ -15,7 +15,7 @@ return {
 		vim.keymap.set(
 			"n",
 			"<leader>fl",
-			":lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>",
+			":lua require('telescope').extensions.egrepify.egrepify {}<CR>",
 			{ desc = "Telescope Live Grep" }
 		)
 		vim.keymap.set("n", "<leader>fs", builtin.grep_string, { desc = "Telescope Grep String" })
@@ -76,16 +76,28 @@ return {
 		end
 		telescope.setup({
 			pickers = {
-				live_grep = {
-					additional_args = function(_)
-						return { "--hidden" }
-					end,
-				},
 				find_files = {
+					theme = "dropdown",
 					hidden = true,
 				},
 			},
 			defaults = {
+				vimgrep_arguments = {
+					"rg",
+					"--hidden",
+				},
+				prompt_prefix = "   ",
+				selection_caret = " ",
+				entry_prefix = " ",
+				sorting_strategy = "ascending",
+				layout_config = {
+					horizontal = {
+						prompt_position = "top",
+						preview_width = 0.55,
+					},
+					width = 0.87,
+					height = 0.80,
+				},
 				mappings = {
 					n = {
 						["<Tab>"] = focus_preview,
