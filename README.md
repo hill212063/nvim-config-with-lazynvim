@@ -2,6 +2,7 @@
 
 - ripgrep
 - fd
+- make
 - lazygit
 - xclip
 - nodejs
