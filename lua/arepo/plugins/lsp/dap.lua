@@ -26,6 +26,7 @@ return {
 		vim.keymap.set("n", "<Leader>dsou", dap.step_out, { desc = "Debug step out" })
 		vim.keymap.set("n", "<Leader>dt", dap.toggle_breakpoint, { desc = "Debug toggle breakpoint" })
 		vim.keymap.set("n", "<Leader>dc", dap.continue, { desc = "Debug continue" })
+		vim.keymap.set("n", "<Leader>duic", dapui.close, { desc = "DAP UI close" })
 	end,
 }
 
