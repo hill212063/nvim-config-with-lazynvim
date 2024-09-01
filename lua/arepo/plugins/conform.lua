@@ -16,6 +16,8 @@ return {
 				python = { "black" },
 				java = { "google-java-format" },
 				rust = { "rustfmt" },
+				c = { "clang-format" },
+				cpp = { "clang-format" },
 			},
 		})
 
