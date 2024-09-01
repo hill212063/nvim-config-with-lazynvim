@@ -32,6 +32,7 @@ return {
 			"terraformls",
 			"jdtls",
 			"rust_analyzer",
+			"clangd",
 		}) do
 			lspconfig[lsp].setup({})
 		end

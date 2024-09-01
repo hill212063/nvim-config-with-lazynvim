@@ -6,7 +6,9 @@ return {
 
 		null_ls.setup({
 			sources = {
-				-- Typescript
+				-- C++
+				null_ls.builtins.formatting.clang_format,
+				-- TS/JS
 				null_ls.builtins.formatting.prettierd,
 				-- Python
 				null_ls.builtins.formatting.black,

@@ -11,9 +11,8 @@
 - pynvim
 - ruby
 
-config directory should be for configuration code which don't want Lazy to run as plugin.
-If possible, configuration  code should be under `config` function under plugin.
 
-For special case like `dap-js.lua`, due to I decide to struct the packages according to language but for dap js,
-they don't have dedicate plugin for dap only have dap configuration for js. So I decide to move the configuration code
-to dap package in config directory
+NOTED: For debugger, if debugger has custom config so it can be configured in `mason-nvim-dap.lua`
+but if not then the debugger should has its own config file for example:
+
+- nvim-java, due to it is another plugin not a config so it should seperate as plugin specifig file `nvim-java.lua`.

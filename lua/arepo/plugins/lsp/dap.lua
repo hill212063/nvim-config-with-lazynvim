@@ -10,9 +10,6 @@ return {
 		local dap = require("dap")
 		local dapui = require("dapui")
 
-		-- Config for JS TS JSX TSX
-		require("arepo.config.dap.dap-js")
-
 		dapui.setup()
 		dap.listeners.after.event_initialized["dapui_config"] = function()
 			dapui.open()

@@ -16,7 +16,4 @@ require("lazy").setup({
 	{ import = "arepo.plugins.git" },
 	{ import = "arepo.plugins.telescope" },
 	{ import = "arepo.plugins.lsp" },
-	{ import = "arepo.plugins.go" },
-	{ import = "arepo.plugins.java" },
-	{ import = "arepo.plugins.python" },
 })

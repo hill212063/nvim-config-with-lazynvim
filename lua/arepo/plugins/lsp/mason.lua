@@ -42,6 +42,7 @@ return {
 				"rust_analyzer",
 				"helm_ls",
 				"yamlls",
+				"clangd",
 			},
 			-- auto-install config server (with lspconfig)
 			automatic_installation = true,
@@ -62,6 +63,7 @@ return {
 				"google-java-format",
 				"rustfmt",
 				"black",
+				"clang-format",
 				-- Linter
 				"mypy",
 				"ruff",
