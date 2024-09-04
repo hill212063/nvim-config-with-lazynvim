@@ -17,7 +17,7 @@ return {
 				-- Go
 				null_ls.builtins.formatting.goimports,
 				null_ls.builtins.formatting.gofumpt,
-				null_ls.builtins.formatting.golines,
+				null_ls.builtins.formatting.golangci_lint,
 				-- Java
 				null_ls.builtins.formatting.google_java_format,
 				null_ls.builtins.diagnostics.checkstyle.with({

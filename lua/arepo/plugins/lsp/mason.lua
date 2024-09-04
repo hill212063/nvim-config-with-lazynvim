@@ -69,7 +69,7 @@ return {
 				"ruff",
 				"eslint_d",
 				"gitlint",
-				"glint",
+				"golangci-lint",
 				"yamllint",
 				-- Debugger
 				"debugpy",
