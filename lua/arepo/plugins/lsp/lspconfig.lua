@@ -23,7 +23,7 @@ return {
 			"cssls",
 			"lua_ls",
 			"emmet_ls",
-			"pyright",
+			"pylsp",
 			"jsonls",
 			"gopls",
 			"bashls",
