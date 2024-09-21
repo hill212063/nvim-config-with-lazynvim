@@ -25,7 +25,7 @@ return {
 			-- list of servers for mason to install
 			ensure_installed = {
 				-- LSP
-				"tsserver",
+				"ts_ls",
 				"tailwindcss",
 				"html",
 				"cssls",
