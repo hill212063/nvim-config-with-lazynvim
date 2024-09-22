@@ -17,7 +17,6 @@ return {
 
 		-- Setup LSP default
 		for _, lsp in ipairs({
-			"tailwindcss",
 			"html",
 			"cssls",
 			"lua_ls",
@@ -31,7 +30,6 @@ return {
 			"docker_compose_language_service",
 			"terraformls",
 			"jdtls",
-			"rust_analyzer",
 			"clangd",
 		}) do
 			lspconfig[lsp].setup({})

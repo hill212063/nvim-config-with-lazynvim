@@ -4,10 +4,6 @@ return {
 		require("conform").setup({
 			formatters_by_ft = {
 				lua = { "stylua" },
-				javascript = { "prettierd" },
-				typescript = { "prettierd" },
-				javascriptreact = { "prettierd" },
-				typescriptreact = { "prettierd" },
 				xml = { "xmlformat" },
 				json = { "jq" },
 				html = { "htmlbeautifier" },
@@ -15,7 +11,6 @@ return {
 				go = { "goimports", "gofumpt" },
 				python = { "black" },
 				java = { "google-java-format" },
-				rust = { "rustfmt" },
 				c = { "clang-format" },
 				cpp = { "clang-format" },
 			},

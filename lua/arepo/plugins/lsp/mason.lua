@@ -1,10 +1,7 @@
 return {
 	"williamboman/mason.nvim",
 	dependencies = { "williamboman/mason-lspconfig.nvim", "WhoIsSethDaniel/mason-tool-installer.nvim" },
-	config = function()
-		-- import mason
-		local mason = require("mason")
-
+	config = function() -- import mason local mason = require("mason")
 		-- import mason-lspconfig
 		local mason_lspconfig = require("mason-lspconfig")
 
@@ -38,7 +35,6 @@ return {
 				"terraformls",
 				"docker_compose_language_service",
 				"jdtls",
-				"rust_analyzer",
 				"helm_ls",
 				"yamlls",
 				"clangd",
@@ -59,7 +55,6 @@ return {
 				"gofumpt",
 				"golines",
 				"google-java-format",
-				"rustfmt",
 				"black",
 				"clang-format",
 				-- Linter
