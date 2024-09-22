@@ -17,7 +17,6 @@ return {
 
 		-- Setup LSP default
 		for _, lsp in ipairs({
-			"ts_ls",
 			"tailwindcss",
 			"html",
 			"cssls",

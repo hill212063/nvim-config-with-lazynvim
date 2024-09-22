@@ -25,12 +25,22 @@ return {
 					require("mason-nvim-dap").default_setup(config)
 				end,
 				delve = function(config)
-					config.adapters = {
+					config.adapters.go = {
 						type = "server",
 						port = "${port}",
 						executable = {
 							command = vim.fn.stdpath("data") .. "/mason/bin/dlv",
 							args = { "dap", "-l", "127.0.0.1:${port}" },
+						},
+					}
+					config.configurations.go = {
+						{
+							type = "go",
+							name = "Debug",
+							request = "launch",
+							showLog = false,
+							program = "${file}",
+							dlvToolPath = vim.fn.exepath("dlv"), -- Adjust to where delve is installed
 						},
 					}
 					require("mason-nvim-dap").default_setup(config)

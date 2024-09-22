@@ -25,8 +25,6 @@ return {
 			-- list of servers for mason to install
 			ensure_installed = {
 				-- LSP
-				"ts_ls",
-				"tailwindcss",
 				"html",
 				"cssls",
 				"lua_ls",
@@ -53,7 +51,6 @@ return {
 			ensure_installed = {
 				-- Formatter
 				"stylua",
-				"prettierd",
 				"xmlformatter",
 				"jq",
 				"htmlbeautifier",
@@ -68,15 +65,13 @@ return {
 				-- Linter
 				"mypy",
 				"ruff",
-				"eslint_d",
 				"gitlint",
 				"golangci-lint",
 				"yamllint",
 				-- Debugger
 				"debugpy",
 				"delve",
-				"js-debug-adapter",
-				"chrome-debug-adapter",
+				"dart-debug-adapter",
 			},
 			automatic_installation = true,
 		})
