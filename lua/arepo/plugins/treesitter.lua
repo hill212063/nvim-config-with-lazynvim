@@ -17,6 +17,7 @@ return {
 				"dart",
 				"css",
 				"sql",
+				"markdown",
 			},
 			sync_install = false,
 			auto_install = true,

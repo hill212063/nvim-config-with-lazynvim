@@ -6,6 +6,9 @@ return {
 
 		null_ls.setup({
 			sources = {
+				-- Markdown
+				null_ls.builtins.formatting.mdformat,
+				null_ls.builtins.formatting.markdown_toc,
 				-- C++
 				null_ls.builtins.formatting.clang_format,
 				-- Python
