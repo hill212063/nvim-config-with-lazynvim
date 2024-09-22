@@ -19,8 +19,8 @@ but if not then the debugger should has its own config file for example:
 # Language support
 | Language | LSP | DAP (debugger) |
 |----------|-----|----------------|
-| Java     | [x] | [x]            |
-| Go       | [x] | [x]            |
-| Python   | [x] | [x]            |
-| C/C++    | [x] | []             |
-| Flutter  | [x] | [x]            |
+| Java     | yes | yes            |
+| Go       | yes | yes            |
+| Python   | yes | yes            |
+| C/C++    | yes | no             |
+| Flutter  | yes | yes            |
