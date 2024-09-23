@@ -1,6 +1,7 @@
 # Dependencies to installed.
 - ripgrep
 - fd
+- fzf
 - make
 - lazygit
 - xclip
