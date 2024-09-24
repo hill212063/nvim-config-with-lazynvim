@@ -1,50 +1,78 @@
 return {
-	-- for DAP support
-	{ "mfussenegger/nvim-dap" },
-	{
-		"akinsho/flutter-tools.nvim",
-		dependencies = { "nvim-lua/plenary.nvim", "stevearc/dressing.nvim" },
-		config = function()
-			require("flutter-tools").setup({
-				-- (uncomment below line for windows only)
-				-- flutter_path = "home/flutter/bin/flutter.bat",
-
-				debugger = {
-					-- make these two params true to enable debug mode
-					enabled = false,
-					run_via_dap = false,
-					register_configurations = function(_)
-						require("dap").adapters.dart = {
-							type = "executable",
-							command = vim.fn.stdpath("data") .. "/mason/bin/dart-debug-adapter",
-							args = { "flutter" },
-						}
-
-						require("dap").configurations.dart = {
-							{
-								type = "dart",
-								request = "launch",
-								name = "Launch flutter",
-								dartSdkPath = "~/flutter/bin/cache/dart-sdk/",
-								flutterSdkPath = "~/flutter",
-								program = "${workspaceFolder}/lib/main.dart",
-								cwd = "${workspaceFolder}",
-							},
-						}
-						-- uncomment below line if you've launch.json file already in your vscode setup
-						-- require("dap.ext.vscode").load_launchjs()
-					end,
-				},
-				dev_log = {
-					-- toggle it when you run without DAP
-					enabled = false,
-					open_cmd = "tabedit",
-				},
-			})
-		end,
+	"akinsho/flutter-tools.nvim",
+	event = "VeryLazy",
+	dependencies = {
+		"nvim-lua/plenary.nvim",
+		"stevearc/dressing.nvim",
 	},
-	-- for dart syntax hightling
-	{
-		"dart-lang/dart-vim-plugin",
-	},
+	config = function()
+		require("flutter-tools").setup({
+			flutter_path = nil,
+			fvm = false,
+			widget_guides = { enabled = true },
+			lsp = {
+				settings = {
+					showtodos = true,
+					completefunctioncalls = true,
+					analysisexcludedfolders = {
+						vim.fn.expand("$Home/.pub-cache"),
+					},
+					renamefileswithclasses = "prompt",
+					updateimportsonrename = true,
+					enablesnippets = false,
+				},
+			},
+			debugger = {
+				enabled = true,
+				run_via_dap = true,
+				exception_breakpoints = {},
+				register_configurations = function(paths)
+					local dap = require("dap")
+					-- See also: https://github.com/akinsho/flutter-tools.nvim/pull/292
+					dap.adapters.dart = {
+						type = "executable",
+						command = paths.flutter_bin,
+						args = { "debug-adapter" },
+					}
+					dap.configurations.dart = {}
+					require("dap.ext.vscode").load_launchjs()
+				end,
+			},
+		})
+	end,
 }
+
+-- Example of .vscode/launch.json
+-- {
+--   "version": "0.0.1",
+--   "configurations": [
+--     {
+--       "name": "Run app for Dev",
+--       "program": "${workspaceFolder}/lib/main.dart",
+--       "request": "launch",
+--       "type": "dart",
+--       "flutterMode": "debug",
+--       "args": [
+--         "--debug",
+--         "--flavor",
+--         "dev",
+--         "--dart-define-from-file=define/flavor/dev/common.json",
+--         "--dart-define-from-file=define/flavor/dev/firebase_options.json"
+--       ]
+--     },
+--     {
+--       "name": "Run app for Prd",
+--       "program": "${workspaceFolder}/lib/main.dart",
+--       "request": "launch",
+--       "type": "dart",
+--       "flutterMode": "debug",
+--       "args": [
+--         "--debug",
+--         "--flavor",
+--         "prd",
+--         "--dart-define-from-file=define/flavor/prd/common.json",
+--         "--dart-define-from-file=define/flavor/prd/firebase_options.json"
+--       ]
+--     }
+--   ]
+-- }
