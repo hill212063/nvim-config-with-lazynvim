@@ -3,6 +3,11 @@ vim.opt.relativenumber = true
 vim.opt.numberwidth = 9
 vim.opt.statuscolumn = "%s%l %r"
 
+vim.opt.foldcolumn = "1" -- '0' is not bad
+vim.opt.foldlevel = 99 -- Using ufo provider need a large value, feel free to decrease the value
+vim.opt.foldlevelstart = 99
+vim.opt.foldenable = true
+
 vim.opt.clipboard = "unnamedplus"
 
 vim.opt.tabstop = 2
