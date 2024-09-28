@@ -42,7 +42,6 @@ return {
 		})
 		local telescope = require("telescope")
 		telescope.load_extension("flutter")
-		telescope.extensions.flutter.commands()
 	end,
 }
 
