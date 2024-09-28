@@ -4,6 +4,7 @@ return {
 	dependencies = {
 		"nvim-lua/plenary.nvim",
 		"stevearc/dressing.nvim",
+		"nvim-telescope/telescope.nvim",
 	},
 	config = function()
 		require("flutter-tools").setup({
@@ -39,6 +40,9 @@ return {
 				end,
 			},
 		})
+		local telescope = require("telescope")
+		telescope.load_extension("flutter")
+		telescope.extensions.flutter.commands()
 	end,
 }
 
