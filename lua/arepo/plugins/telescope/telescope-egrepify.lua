@@ -1,5 +1,6 @@
 return {
 	"fdschmidt93/telescope-egrepify.nvim",
+  lazy = true,
 	dependencies = {
 		"nvim-telescope/telescope.nvim",
 		"nvim-lua/plenary.nvim",

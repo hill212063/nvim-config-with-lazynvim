@@ -1,5 +1,6 @@
 return {
 	"tpope/vim-projectionist",
+	lazy = true,
 }
 
 -- Demo java project

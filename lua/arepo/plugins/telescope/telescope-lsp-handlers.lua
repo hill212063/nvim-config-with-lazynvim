@@ -1,5 +1,6 @@
 return {
 	"Slotos/telescope-lsp-handlers.nvim",
+  lazy = true,
 	dependencies = {
 		"nvim-telescope/telescope.nvim",
 	},

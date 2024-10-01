@@ -1,5 +1,6 @@
 return {
 	"neovim/nvim-lspconfig",
+  lazy = true,
 	event = { "BufReadPre", "BufNewFile", "BufEnter" },
 	dependencies = {
 		"hrsh7th/cmp-nvim-lsp",
@@ -17,6 +18,7 @@ return {
 
 		-- Setup LSP default
 		for _, lsp in ipairs({
+			"vimls",
 			"html",
 			"cssls",
 			"lua_ls",

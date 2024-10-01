@@ -1,5 +1,6 @@
 return {
 	"nvimtools/none-ls.nvim",
+	lazy = true,
 	dependencies = { "mason.nvim" },
 	opt = function()
 		local null_ls = require("null-ls")

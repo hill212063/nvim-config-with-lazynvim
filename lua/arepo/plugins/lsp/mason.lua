@@ -25,6 +25,7 @@ return {
 			-- list of servers for mason to install
 			ensure_installed = {
 				-- LSP
+				"vimls",
 				"html",
 				"cssls",
 				"lua_ls",
