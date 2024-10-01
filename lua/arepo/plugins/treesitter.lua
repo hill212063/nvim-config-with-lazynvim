@@ -8,6 +8,7 @@ return {
 			ensure_installed = {
 				"java",
 				"go",
+				"python",
 				"lua",
 				"yaml",
 				"json",
